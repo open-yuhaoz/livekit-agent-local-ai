@@ -1,0 +1,8 @@
+livekit-agents>=0.12.1
+livekit-plugins-openai>=0.10.9
+livekit-plugins-deepgram>=0.6.13
+livekit-plugins-silero>=0.7.4
+python-dotenv~=1.0
+TensorFlow>=2.0
+livekit-plugins-turn-detector==0.3.5
+livekit-plugins-elevenlabs
