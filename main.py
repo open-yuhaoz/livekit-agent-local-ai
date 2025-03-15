@@ -64,14 +64,14 @@ async def entrypoint(ctx: JobContext):
 
     # 1) Speech-to-Text (STT) with OpenAI + FasterWhisper.
     stt_plugin = openai.STT(
-        base_url="http://172.16.200.92:8000/v1",  # Example local endpoint.
+        base_url="http://127.0.0.1:8000/v1",  # Example local endpoint.
         model="Systran/faster-whisper-large-v3",
         api_key="not-needed",
     )
 
     # 2) Language Model (LLM) from a custom local endpoint.
     llm_plugin = openai.LLM(
-        base_url="http://172.16.200.92:11434/v1",  # Example local endpoint.
+        base_url="http://127.0.0.1:11434/v1",  # Example local endpoint.
         api_key="not-needed",  # Your custom API key.
         model="krith/qwen2.5-14b-instruct:IQ1_M",
     )
@@ -82,7 +82,7 @@ async def entrypoint(ctx: JobContext):
         model="kokoro",  # Local placeholder model name.
         voice="zf_018",  # Example voice.
         speed=1,
-        base_url="http://172.16.200.92:8880/v1",  # Kokoro TTS endpoint.
+        base_url="http://127.0.0.1:8880/v1",  # Kokoro TTS endpoint.
         api_key="not-needed",  # Typically not needed for local Kokoro.
     )
 
